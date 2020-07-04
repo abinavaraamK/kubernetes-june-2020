@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: spring-ws-test
+  name: spring-ws-test
+  namespace: default
+spec:
+  ports:
+  - nodePort: 31500
+    port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: spring-ws-test
+  type: NodePort

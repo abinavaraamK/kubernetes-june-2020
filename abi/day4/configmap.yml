@@ -1,0 +1,6 @@
+apiVersion: v1bet1
+kind: ConfigMap
+metadata:
+  name: custom-config
+data:
+  greeting_msg: "hello kube"

@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: spring-ws-test
+  name: spring-ws-test
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: spring-ws-test
+  template:
+    metadata:
+      labels:
+        app: spring-ws-test
+    spec:
+      containers:
+      - image: abinavaraamdoc2020/spring-ws-test:latest
+        name: spring-ws-test
+
